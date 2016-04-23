@@ -2,6 +2,7 @@
 @section('content')
 <div class="container">
 	<a class="btn btn-primary btn-sm pull-right" href="{{ route('book.create')  }}">Add New Book</a>
+	<!--<a class="btn btn-primary btn-sm pull-right" href="{{ URL::to('book/create') }}">Add New Book</a>-->
 	<br><br>
 	<div class="list-group">
 	@foreach( $allBooks as $book )

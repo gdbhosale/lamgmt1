@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Book;
 
+use Session;
+
 use App\Http\Requests\PublishBookRequest;
 
 class BookController extends Controller {
@@ -23,7 +25,8 @@ class BookController extends Controller {
 	 */
 	public function index() {
 		$allBooks = Book::all();
-        return View('books.bookList', compact('allBooks'));
+        //return View('books.bookList', compact('allBooks'));
+		return View('books.bookList')->with('allBooks', $allBooks);
 	}
 
 	/**
@@ -47,6 +50,8 @@ class BookController extends Controller {
         $book->description= $requestData['description'];
         $book->author= $requestData['author'];
         $book->save();
+		
+		Session::flash('message', 'Successfully created book "'.$book->title.'" !!!');
 
         //Send control to index() method where it'll redirect to bookList.blade.php
         return redirect()->route('book.index');
