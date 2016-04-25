@@ -1,6 +1,6 @@
-# Laravel + jQuery + Bootstrap + Font Awesome
+# Laravel + jQuery + Bootstrap + Font Awesome + CRUD
 
-This library is latest compilation of best UI libraries with Laravel Backend.
+This library is latest compilation of best UI libraries with Laravel Backend and sample CRUD for Books.
 
 Components:
 
@@ -13,6 +13,12 @@ Bootstrap (3.3.6) from http://getbootstrap.com
 Font Awesome (4.5.0) from http://fortawesome.github.io/Font-Awesome/icons
 
 This library is also customed with Template Pattern easy to start any new project.
+
+Registered user:
+
+Username: gdb.sci123@gmail.com
+
+Password: 12345678
 
 Commands used:
 
