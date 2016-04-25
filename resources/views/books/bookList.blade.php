@@ -5,7 +5,7 @@
 	<!--<a class="btn btn-primary btn-sm pull-right" href="{{ URL::to('book/create') }}">Add New Book</a>-->
 	<br><br>
 	<div class="list-group">
-	@foreach( $allBooks as $book )
+	@foreach($allBooks as $book)
 		<div class="list-group-item">
 			{!! Html::linkRoute('book.show', $book->title, array($book->id)) !!} ({{$book->author }})
 			<span class="pull-right">
