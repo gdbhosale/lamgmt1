@@ -317,45 +317,6 @@ composer require illuminate/html
 
 
 
-
-
-
-
-
-----------------------------------------------------------------------
-// create model migration
-php artisan make:migration create_student_table --table=students --create
-
-// ???
-php artisan make:model Students
-
-    public function up()
-    {
-        Schema::create('students', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name', 255);
-            $table->string('email', 255);
-			$table->string('phone', 255);
-			$table->string('class', 255);
-            $table->integer('age');
-            $table->timestamps();
-        });
-    }
-
-    public function down()
-    {
-        Schema::drop('students');
-    }
-
-// creating db classes automatically
-php artisan migrate
-
-// Make controller
-php artisan make:controller StudentsController
-
-// Route listing with processing route file
-php artisan route:list
-
 ```
 
 Note:
